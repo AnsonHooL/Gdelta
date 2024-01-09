@@ -617,11 +617,7 @@ int gencode(uint8_t *newBuf, uint32_t newSize, uint8_t *baseBuf,
 
                 if (unit.length != 0)
                 {
-                    cout<< "cursor1:"<< instStream.cursor <<endl;
                     write_unit(instStream, unit);
-                    cout<<"matlen"<<  matchlen <<endl;
-                    cout<<"unmatlen:"<<  unit.length <<endl;
-                    cout<< "cursor2:"<< instStream.cursor <<endl;
                     stream_from(dataStream, newStream, lastLiteral_begin, unit.length);
                 }
 
@@ -631,9 +627,7 @@ int gencode(uint8_t *newBuf, uint32_t newSize, uint8_t *baseBuf,
             unit.flag = true;
             unit.offset = _offset;
             unit.length = matchlen;
-            cout<< "cursor3:"<< instStream.cursor <<endl;
             write_unit(instStream, unit);
-            cout<< "cursor4:"<< instStream.cursor <<endl;
             unit.length = 0; // Mark written
 
             // Update cursor (inputPos) and fingerprint
@@ -750,7 +744,6 @@ int gencode(uint8_t *newBuf, uint32_t newSize, uint8_t *baseBuf,
     if (hash_table)
         free(hash_table);
 
-    cout<< matchNum <<endl;
 
     return deltaStream.cursor;
 }

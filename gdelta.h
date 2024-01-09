@@ -5,15 +5,15 @@ using namespace std;
 #include <cstdint>
 
 /*****Parameter*****/
-#define ChunkSize 300 * 1024 * 1024
-#define INIT_BUFFER_SIZE 128 * 1024 * 1024
+#define ChunkSize (300 * 1024)
+#define INIT_BUFFER_SIZE (128 * 1024)
 #define FPTYPE uint64_t
 //#define FPTYPE uint32_t
 #define WordSize 8
-#define SkipStep 3
-//#define SkipOn
-//#define BaseSampleRate 3
-//#define ReverseMatch
+#define SkipStep 2
+#define SkipOn
+#define BaseSampleRate 3
+#define ReverseMatch
 /*****Parameter*****/
 
 #define PRINT_PERF 0
