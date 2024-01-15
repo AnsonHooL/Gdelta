@@ -1,6 +1,7 @@
 Build
 
 cmake .
+
 make -j4
 
 Feature:
