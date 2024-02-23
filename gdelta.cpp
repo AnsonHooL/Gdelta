@@ -186,7 +186,7 @@ void GFixSizeChunking(unsigned char *data, int len, int begflag, int begsize,
 
     i -= WordSize;
     FPTYPE index = 0;
-    int numChunks = len - WordSize + 1;
+    int numChunks = len - WordSize;
 
     int _begsize = begflag ? begsize : 0;
     int indexMoveLength = (sizeof(FPTYPE) * 8 - mask);
@@ -221,7 +221,7 @@ void GFixSizeChunking2(unsigned char *data, int len, int begflag, int begsize,
 
     i -= WordSize;
     FPTYPE index = 0;
-    int numChunks = len - WordSize + 1;
+    int numChunks = len - WordSize - 1;
 
     int _begsize = begflag ? begsize : 0;
     int indexMoveLength = (sizeof(FPTYPE) * 8 - mask);
@@ -252,7 +252,7 @@ void GFixSizeChunking_3(unsigned char *data, int len, int begflag, int begsize,
 
     i -= WordSize;
     FPTYPE index = 0;
-    int numChunks = len - WordSize + 1;
+    int numChunks = len - WordSize - 2;
 
 
     int _begsize = begflag ? begsize : 0;
@@ -286,7 +286,7 @@ void GFixSizeChunking_4(unsigned char *data, int len, int begflag, int begsize,
 
     i -= WordSize;
     FPTYPE index = 0;
-    int numChunks = len - WordSize + 1;
+    int numChunks = len - WordSize - 3;
 
     int flag = 0;
     int _begsize = begflag ? begsize : 0;
